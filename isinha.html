@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isinha do bololo</title>
+</head>
+
+<body>
+    <center>
+        <label>Digite seu user</label><br>
+        <input type="text" id="nome"><br>
+        <label>Digite sua senha</label>
+        <input type="text" id="senha"><br>
+        <button onclick="user()">Clique para enviar!</button>
+        <div id="quadrado"></div>
+        <div id="res"></div>
+    </center>
+    
+
+    <script>
+        function user(){
+            let nome = document.getElementById("nome").value
+            let pass = document.getElementById("senha").value
+            let res = document.getElementById("res").value
+            let imagem = document.createElement("img")
+                imagem.src = "namo.jpeg";
+
+
+            if(nome === "aline" && pass === "1234"){
+                let quadrado = document.getElementById("quadrado")
+                imagem.src = "namo.jpeg";
+                quadrado.appendChild(imagem)
+                res.innerText = "bem vinda namorada da isabella gay"
+            }
+            else{
+                res.innerText = "não foi dessa vez companheira"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
